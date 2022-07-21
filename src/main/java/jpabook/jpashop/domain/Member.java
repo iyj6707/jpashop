@@ -10,8 +10,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
-import org.apache.tomcat.jni.Address;
-
 import lombok.Getter;
 import lombok.Setter;
 
