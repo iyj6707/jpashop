@@ -2,6 +2,7 @@ package jpabook.jpashop.service;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
+
 import javax.persistence.EntityManager;
 
 import org.junit.jupiter.api.Test;
@@ -16,9 +17,12 @@ import jpabook.jpashop.repository.MemberRepository;
 @Transactional
 public class MemberServiceTest {
 
-    @Autowired MemberService memberService;
-    @Autowired MemberRepository memberRepository;
-    @Autowired EntityManager em;
+    @Autowired
+    MemberService memberService;
+    @Autowired
+    MemberRepository memberRepository;
+    @Autowired
+    EntityManager em;
 
     @Test
     public void 회원가입() throws Exception {
