@@ -1,5 +1,6 @@
 package jpabook.jpashop.repository;
 
+import java.util.List;
 import javax.persistence.EntityManager;
 
 import org.springframework.stereotype.Repository;
@@ -21,5 +22,5 @@ public class OrderRepository {
         return em.find(Order.class, id);
     }
 
-    // public List<Order> findAll(OrderSearch orderSearch) {}
+//    public List<Order> findAll(OrderSearch orderSearch) { }
 }
