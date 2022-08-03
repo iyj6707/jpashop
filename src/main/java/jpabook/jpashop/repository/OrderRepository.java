@@ -20,7 +20,7 @@ import org.springframework.util.StringUtils;
 @Repository
 @RequiredArgsConstructor
 public class OrderRepository {
-    
+
     private final EntityManager em;
 
     public void save(Order order) {
@@ -99,5 +99,13 @@ public class OrderRepository {
         cq.where(cb.and(criteria.toArray(new Predicate[0])));
         TypedQuery<Order> query = em.createQuery(cq).setMaxResults(1000);
         return query.getResultList();
+    }
+
+    public List<Order> findAllWithMemberDelivery() {
+        return em.createQuery(
+            "select o from Order o" +
+                " join fetch o.member m" +
+                " join fetch o.delivery d", Order.class
+        ).getResultList();
     }
 }
