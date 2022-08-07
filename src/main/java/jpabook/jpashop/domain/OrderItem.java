@@ -14,7 +14,9 @@ import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.annotations.BatchSize;
 
+@BatchSize(size = 100)
 @Entity
 @Getter
 @Setter
